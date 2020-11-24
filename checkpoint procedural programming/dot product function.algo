@@ -1,0 +1,33 @@
+FUNCTION Dot_product(v1,v2: ARRAY_OF FLOAT) : Float
+
+ i : INTEGER;
+ ps : FLOAT
+
+BEGIN
+ ps:=0
+ i:=0
+ for i from 0 to v1.length Do 
+    for i from 0 to v1.length -1 step 1 
+    DO
+      ps := ps + v1[i]*v2[i];
+    END_for
+ END_for
+return ps 
+END
+
+ALGORITHM Orthogonal
+VAR
+    n1, n2 : ARRAY_OF FLOAT;
+    prod: INTEGER
+BEGIN
+
+for i from 0 to v1.length -1 step 1 do 
+    read (v1[i])
+    read (v2[i])
+end for 
+prod:= function Dot_product (n1,n2)
+ if (prod := 0) then write ("Orthogonal")
+ Else (write "Non orthogonal")
+ End if 
+
+End 
